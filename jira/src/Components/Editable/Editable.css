@@ -1,0 +1,76 @@
+.Editable {
+  width: 100%;
+}
+
+.Editable_display {
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+  cursor: default;
+}
+
+.Editable_display:hover {
+  background-color: #ccc;
+}
+
+.Editable_edit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Editable_edit input {
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #1379ec;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.Editable_edit_footer {
+  display: flex;
+  align-items: center;
+}
+
+.Editable_edit_footer button {
+  outline: none;
+  border: none;
+  color: white;
+  background-color: #1379ec;
+  transition: 200ms;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Editable_edit_footer button:hover {
+  background-color: #0765d1;
+}
+
+.Editable_edit_footer svg {
+  cursor: pointer;
+}
+
+#text-input{
+  outline: none;
+  border: none;
+  height: 30px;
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid gray;
+}
+#container{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+#button{
+  outline: none;
+  border: none;
+  height: 20px;
+  padding: 0px 10px;
+  border-radius: 2px;
+  color: white;
+  background-color: #0765d1;
+}
