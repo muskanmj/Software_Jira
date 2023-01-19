@@ -12,79 +12,21 @@ function App() {
       id: 0,
       title: "To Do",
       cards: [],
-      /* {
-         id: Date.now() + Math.random(),
-         title: "Card 1",
-         date: "",
-         desc: "bvg hsu sgb"
-       },
-       {
-         id: Date.now() + Math.random(),
-         title: "Card 2",
-         date: "",
-         desc: "bvg hsu sgb"
-       },
-       {
-         id: Date.now() + Math.random(),
-         title: "Card 2",
-         date: "",
-         desc: "bvg hsu sgb"
-       },
-       {
-         id: Date.now() + Math.random(),
-         title: "Card 2",
-         date: "",
-         desc: "bvg hsu sgb"
-       }
-     ]*/
     },
     {
       id: 1,
       title: "Processing",
       cards: [],
-      //   {
-      //     id: Date.now() + Math.random(),
-      //     title: "Card 1",
-      //     date: "",
-      //     desc: "bvg hsu sgb"
-      //   }
-      // ]
     },
     {
       id: 2,
       title: "Testing",
       cards: [],
-      //   {
-      //     id: Date.now() + Math.random(),
-      //     title: "Card 1",
-      //     date: "",
-      //     desc: "bvg hsu sgb"
-      //   },
-      //   {
-      //     id: Date.now() + Math.random(),
-      //     title: "Card 2",
-      //     date: "",
-      //     desc: "bvg hsu sgb"
-      //   }
-      // ]
     },
     {
       id: 3,
       title: "Completed",
       cards: [],
-      //   {
-      //     id: Date.now() + Math.random(),
-      //     title: "Card 1",
-      //     date: "",
-      //     desc: "bvg hsu sgb"
-      //   },
-      //   {
-      //     id: Date.now() + Math.random(),
-      //     title: "Card 2",
-      //     date: "",
-      //     desc: "bvg hsu sgb"
-      //   }
-      // ]
     },
   ]);
 
@@ -155,17 +97,10 @@ function App() {
   useEffect(() => {
     if (!mounted) return;
     getData();
-    /*if(localStorage.getItem('items') == null){
-      localStorage.setItem('items', JSON.stringify(boards));
-      setBoards(JSON.parse(localStorage.getItem('items')));
-    }else{
-      setBoards(JSON.parse(localStorage.getItem('items')));
-    } */ // eslint-disable-next-line
   }, [mounted])
 
 
   window.addEventListener('unload', () => {
-    //localStorage.setItem('items', JSON.stringify(boards));
   })
 
   const [target, setTarget] = useState({
@@ -262,26 +197,6 @@ function App() {
 
 
   const handleDragEnd = (cid, bid, card) => {
-    /*let s_bIndex, s_cIndex, t_bIndex, t_cIndex;
-
-    s_bIndex = boards.findIndex((item) => item.id === bid);
-    if (s_bIndex < 0) return;
-
-    s_cIndex = boards[s_bIndex]?.cards?.findIndex((item) => item.id === cid);
-    if (s_cIndex < 0) return;
-
-    t_bIndex = boards.findIndex((item) => item.id === target.bid);
-    if (t_bIndex < 0) return;
-
-    t_cIndex = boards[t_bIndex]?.cards?.findIndex((item) => item.id === target.cid);
-    if (t_cIndex < 0) return;
-
-    const tempBoards = [...boards];
-    const tempCard = tempBoards[s_bIndex].cards[s_cIndex];
-
-    tempBoards[s_bIndex].cards.splice(s_cIndex, 1);
-    tempBoards[t_bIndex].cards.splice(t_cIndex, 0, tempCard);
-    setBoards(tempBoards);*/
     moveCard(card, target.bid);
   };
 
@@ -305,9 +220,6 @@ function App() {
     updateCardDB(cid, bid, cards)
   }
 
-  // useEffect(()=>{
-  //   localStorage.setItem('Jira',JSON.stringify(boards));
-  // },[boards])
 
   return (
     <div className="app">
